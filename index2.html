@@ -244,6 +244,117 @@
       border-radius: 5px;
       height: 400px;
     }
+    
+.footer {
+  position: absolute;
+  left: 50%;
+  background-color: #222831;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+  padding: 10px;
+  width: 100%;
+  margin: auto;
+  height: 500px;
+}
+
+.text-muted {
+  color: white !important;
+  font-family: Rubik;
+  text-decoration: none;
+}
+
+.text-muted-main {
+  color: white !important;
+  font-family: Rubik;
+  cursor: pointer !important;
+  text-decoration: none;
+}
+
+.fa {
+  cursor: pointer;
+}
+
+.text-muted-main:hover {
+  color: #0d6efd !important;
+}
+
+.main-div-3:hover {
+  -webkit-box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+          box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  margin-top: -10px;
+  position: relative;
+  top: -10px;
+}
+
+.main-div-3 {
+  padding: 70px;
+  display: inline-block;
+  width: 350px;
+  -webkit-box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+          box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+  height: 250px;
+}
+
+.insta {
+  color: red;
+}
+
+.insta:hover {
+  color: #ff009d !important;
+}
+
+.bg-light {
+  padding: 20px;
+}
+
+@media (max-width: 970px) {
+  .bg-3 {
+    width: auto !important;
+  }
+  .bg-4 {
+    width: auto !important;
+  }
+  .lead {
+    width: auto !important;
+  }
+}
+
+@media (max-width: 800px) {
+  .main-div-1 {
+    margin-bottom: 0px !important;
+  }
+  .main-div-2 {
+    margin-bottom: 0px !important;
+    margin-top: 15px !important;
+  }
+  .ms-5{
+      margin-left: 0px!important;
+      display: block;
+  }
+  .me-5{
+      margin-right: 0px!important;
+      display: block;
+  }
+}
+
+@media (max-width: 1120px) {
+  .main-div-3 {
+    display: none;
+  }
+}
+
+@media (max-width: 330px) {
+  .footer {
+    overflow-y: scroll;
+    overflow-x: hidden !important;
+  }
+}
+.container-fluid{
+    overflow: hidden;
+}
+.footer-links{
+    color: white;
+}
     </style>
 </head>
 <body>
@@ -379,6 +490,64 @@
       </center>
     </div>
   </div>
+  
+  <!-- Footer -->
+  <div class="container-fluid footer" style="margin-top: 8rem;">
+    <footer class="pt-4 my-md-5 pt-md-5 border-to">
+      <div class="row">
+        <div class="col-12 col-md">
+         <h3 class="text-white">Divi<span style="color: #0d6efd">Blog</span></h3>
+          <small class="d-block mb-3 text-muted">&copy; 2021-2022</small>
+        </div>
+        <div class="col-6 col-md">
+          <h5 class="footer-links">Features</h5>
+          <ul class="list-unstyled text-small">
+            <li><a class="text-muted" href="#">Blog design</a></li>
+            <li><a class="text-muted" href="#">SEO specialists</a></li>
+            <li><a class="text-muted" href="#">Experienced Writers</a></li>
+          </ul>
+        </div>
+        <div class="col-6 col-md">
+          <h5 class="footer-links">What we provide</h5>
+          <ul class="list-unstyled text-small">
+            <li><a class="text-muted" href="#Home">Keyword research</a></li>
+            <li><a class="text-muted" href="#Home">On Page SEO</a></li>
+            <li><a class="text-muted" href="#Home">Backlinks</a></li>
+          </ul>
+        </div>
+        <div class="col-6 col-md">
+          <h5 class="footer-links">About</h5>
+          <ul class="list-unstyled text-small">
+            <li><a class="text-muted" href="#">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nostrum qui voluptas officiis quos esse repudiandae.
+            </a></li>
+          </ul>
+        </div>
+        <div class="col-6 col-md">
+          <h5 class="footer-links">Social Links</h5>
+          <ul class="list-unstyled text-small">
+            <li><a class="text-muted" href="#"></a></li>
+            <li style="display: inline-block;margin-left: 0px;"><a class="text-muted-main"
+                href="https://instagram.com/"><i class="fa fa-instagram"></i></a></li>
+            <li style="display: inline-block;margin-left: 10px;"><a class="text-muted-main"
+                href="https://facebook.com/"><i class="fa fa-facebook"></i></a></li>
+            <li style="display: inline-block;margin-left: 10px;"><a class="text-muted-main"
+                href="https://twitter.com/"><i class="fa fa-twitter"></i></a></li>
+            <li style="display: inline-block;margin-left: 10px;"><a class="text-muted-main" href="https://quora.com/"><i
+                  class="fa fa-quora"></i></a></li>
+            <center>
+              <hr
+                style="width: 80vw;display: block!important;display: block;position: absolute;left: 50%;transform: translateX(-50%);margin-top: 25vh;color: white">
+            </center>
+            <center>
+              <h5
+                style="display: block!important;display: block;position: absolute;left: 50%;transform: translateX(-50%);margin-top: 30vh;color: white;font-family: rubik;">
+                Made With &nbsp<i class="fa fa-heart" style="color: red"></i>&nbsp HTML, CSS, JS, jQuery And Bootstrap
+              </h5>
+            </center>
+          </ul>
+        </div>
+      </div>
+    </footer>
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
   <script>
     $(document).ready(function () {
