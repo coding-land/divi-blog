@@ -1,0 +1,500 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Divi Blog</title>
+    <link rel="stylesheet" href="bootstrap.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+    <script src="bootstrap.min.js"></script>
+    
+    <link rel="icon" href="Images/icon.png">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        .container {
+            overflow-x: hidden !important;
+        }
+
+        .content {
+            margin-left: 50px;
+            margin-top: 40px;
+        }
+
+        .sidebar {
+            padding-left: 100px;
+        }
+
+        input {
+            width: 100%;
+            padding-left: 10px;
+            outline: none;
+            border-radius: 2px;
+            border: 1px solid grey;
+            height: 50px;
+        }
+
+        .img {
+            width: 100%;
+            height: 70vh;
+            margin-left: 50px;
+        }
+
+        .container {
+            margin-top: 40px;
+        }
+
+        .main-container {
+            width: 100%;
+            height: 100vh;
+            background-image: url('Images/main-image.jpg');
+            background-size: cover;
+            background-position: 95% 50%;
+            background-repeat: no-repeat;
+            position: relative;
+        }
+
+        .head svg {
+            color: white
+        }
+
+        .image-overlay {
+            background: linear-gradient(to bottom, #ff33cc 0%, #33cccc 100%);
+            position: absolute;
+            width: 100%;
+            height: 100vh;
+            opacity: 0.7;
+        }
+
+        input {
+            width: 97%;
+        }
+
+        .heading {
+            opacity: 1;
+            color: white;
+            font-size: 100px;
+            font-weight: bolder;
+        }
+
+        @media(max-width: 1470px) {
+            .sidebar {
+                padding-left: 10px;
+            }
+
+            .content {
+                margin-left: 0px;
+            }
+
+            input {
+                width: 97%;
+            }
+
+            .img {
+                margin-left: 0px;
+            }
+
+            .container {
+                width: 100%;
+                max-width: 100%;
+            }
+        }
+
+        @media(max-width: 1699px) {
+            .sidebar {
+                padding-left: 10px;
+            }
+
+            .content {
+                margin-left: 0px !important;
+            }
+
+            input {
+                width: 97%;
+            }
+
+            .img {
+                margin-left: 0px !important;
+                width: 100%;
+            }
+        }
+
+        @media(max-width: 1300px) {
+            .sidebar {
+                padding-left: 10px;
+            }
+
+            .content {
+                margin-left: 0px;
+            }
+
+            .img {
+                margin-left: 0px;
+                width: 100%;
+                height: 20%;
+            }
+
+            input {
+                width: 97%;
+            }
+
+            .container {
+                width: 100vw !important;
+                max-width: 100vw !important;
+            }
+
+            img,
+            svg {
+                vertical-align: middle;
+                width: 96%;
+            }
+
+            .head svg {
+                color: white;
+                width: auto;
+            }
+        }
+
+        @media (min-width: 1700px) and (max-width: 2500px) {
+            .sidebar {
+                padding-left: 10px;
+            }
+
+            .content {
+                margin-left: 0px;
+            }
+
+            input {
+                width: 97%;
+            }
+
+            .img {
+                margin-left: 0px;
+                width: 100%;
+            }
+
+            .container {
+                width: 100vw !important;
+                max-width: 100vw !important;
+            }
+
+            img,
+            svg {
+                vertical-align: middle;
+                width: 100%;
+            }
+
+            .head svg {
+                color: white;
+                width: auto;
+            }
+        }
+
+        .head {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+
+        @media(max-width: 400px) {
+            .heading {
+                opacity: 1;
+                color: white;
+                font-size: 70px;
+                font-weight: bolder;
+            }
+
+            .img {
+                width: 100%;
+                height: 9%;
+            }
+
+            .h5,
+            h5 {
+                font-size: 1rem;
+            }
+
+            .col-xs-11 {
+                flex: 0 0 auto;
+                width: 100%;
+            }
+        }
+        .main-form{
+            width: 100%;
+            height: 550px;
+            background-color: #f8f8f8;
+        }
+        .input{
+            width: 90%;
+            border-radius: 3px;
+            border: 1px solid grey;
+        }
+
+.footer {
+  position: absolute;
+  left: 50%;
+  background-color: #222831;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+  padding: 10px;
+  width: 100%;
+  margin: auto;
+  height: 500px;
+}
+
+.text-muted {
+  color: white !important;
+  font-family: Rubik;
+  text-decoration: none;
+}
+
+.text-muted-main {
+  color: white !important;
+  font-family: Rubik;
+  cursor: pointer !important;
+  text-decoration: none;
+}
+
+.fa {
+  cursor: pointer;
+}
+
+.text-muted-main:hover {
+  color: #0d6efd !important;
+}
+
+.main-div-3:hover {
+  -webkit-box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+          box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  margin-top: -10px;
+  position: relative;
+  top: -10px;
+}
+
+.main-div-3 {
+  padding: 70px;
+  display: inline-block;
+  width: 350px;
+  -webkit-box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+          box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+  height: 250px;
+}
+
+.insta {
+  color: red;
+}
+
+.insta:hover {
+  color: #ff009d !important;
+}
+
+.bg-light {
+  padding: 20px;
+}
+
+@media (max-width: 970px) {
+  .bg-3 {
+    width: auto !important;
+  }
+  .bg-4 {
+    width: auto !important;
+  }
+  .lead {
+    width: auto !important;
+  }
+}
+
+@media (max-width: 800px) {
+  .main-div-1 {
+    margin-bottom: 0px !important;
+  }
+  .main-div-2 {
+    margin-bottom: 0px !important;
+    margin-top: 15px !important;
+  }
+  .ms-5{
+      margin-left: 0px!important;
+      display: block;
+  }
+  .me-5{
+      margin-right: 0px!important;
+      display: block;
+  }
+}
+
+@media (max-width: 1120px) {
+  .main-div-3 {
+    display: none;
+  }
+}
+
+@media (max-width: 330px) {
+  .footer {
+    overflow-y: scroll;
+    overflow-x: hidden !important;
+  }
+}
+.container-fluid{
+    overflow: hidden;
+}
+.footer-links{
+    color: white;
+}
+    </style>
+</head>
+
+<body>
+<!-- Contact Us Page -->
+    <div class="main-container">
+        <div class="image-overlay"></div>
+        <div class="head">
+            <h1 class="heading">Divi<span class="text-primary">Blog</span></h1>
+            <div class="m-auto">
+                <center>
+                    <h5 style="display: inline-block;color: white;">Home</h5>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                        class="bi bi-chevron-right" viewBox="0 0 16 16">
+                        <path fill-rule="evenodd"
+                            d="M4.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L10.293 8 4.646 2.354a.5.5 0 0 1 0-.708z" />
+                    </svg>
+                    <h5 style="display: inline-block;color: white;">Contact</h5>
+                </center>
+            </div>
+        </div>
+        <nav class="navbar navbar-expand-lg navbar-dark main-bg fixed-top" style="padding: 40px;">
+            <div class="container-fluid">
+                <a class="navbar-brand" href="#">Divi<span class="text-primary">Blog</span></a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                    aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+                        <li class="nav-item">
+                          <a class="nav-link me-4" aria-current="page" href="index.html">Home</a>
+                        </li>
+                        <li class="nav-item">
+                          <a class="nav-link me-4" href="index2.html">Articles</a>
+                        </li>
+                        <li class="nav-item">
+                          <a class="nav-link me-4" href="index3.html">Team</a>
+                        </li>
+                        <li class="nav-item">
+                          <a class="nav-link active me-4" href="index4.html">Contact</a>
+                        </li>
+                      </ul>
+                </div>
+            </div>
+        </nav>
+    </div>
+    <div class="container">
+        <h3 class="mb-4 mt-5"style="font-weight: bold;">Contact Us</h3>
+        <h6 class="text-secondary mb-5">Phone: 1234567890 <span class="ms-5 text-secondary"> Address: Guwahati Assam India </span> <span class="ms-5 text-secondary"> Email: 146@gmail.com</span><span class="text-secondary ms-5">Website: yourwebsite.com</span></h6>
+        <div class="row">
+            <div class="col-md-6">
+                <iframe
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d29900.553111347097!2d91.7756350408964!3d26.130897046565366!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x375a59186b56f27b%3A0x221cdbe130b90235!2sDispur%2C%20Guwahati%2C%20Assam!5e0!3m2!1sen!2sin!4v1628920954241!5m2!1sen!2sin"
+                     style="border:0;width: 100%;" class="my-3" height="550"allowfullscreen="" loading="lazy"></iframe>
+            </div>
+            <div class="col-md-6">
+                <form>
+                    <div class="main-form">
+                    <center><input type="text" placeholder="Your name"class="mt-5 input"></center>
+                    <center><input type="text" placeholder="Your name"class="mt-3 input"></center>
+                    <center><input type="text" placeholder="Your name"class="mt-3 input"></center>
+                    <center><textarea name="" id="" cols="30" rows="7" class="input my-3 ps-2 pt-2"></textarea></center>
+                    <a class="btn btn-primary ps-5 pe-5 pt-3 pb-3"style="margin-left: 32px;">Submit</a>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+    
+  <!-- Footer -->
+  <div class="container-fluid footer" style="margin-top: 8rem;">
+    <footer class="pt-4 my-md-5 pt-md-5 border-to">
+      <div class="row">
+        <div class="col-12 col-md">
+         <h3 class="text-white">Divi<span style="color: #0d6efd">Blog</span></h3>
+          <small class="d-block mb-3 text-muted">&copy; 2021-2022</small>
+        </div>
+        <div class="col-6 col-md">
+          <h5 class="footer-links">Features</h5>
+          <ul class="list-unstyled text-small">
+            <li><a class="text-muted" href="#">Blog design</a></li>
+            <li><a class="text-muted" href="#">SEO specialists</a></li>
+            <li><a class="text-muted" href="#">Experienced Writers</a></li>
+          </ul>
+        </div>
+        <div class="col-6 col-md">
+          <h5 class="footer-links">What we provide</h5>
+          <ul class="list-unstyled text-small">
+            <li><a class="text-muted" href="#Home">Keyword research</a></li>
+            <li><a class="text-muted" href="#Home">On Page SEO</a></li>
+            <li><a class="text-muted" href="#Home">Backlinks</a></li>
+          </ul>
+        </div>
+        <div class="col-6 col-md">
+          <h5 class="footer-links">About</h5>
+          <ul class="list-unstyled text-small">
+            <li><a class="text-muted" href="#">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nostrum qui voluptas officiis quos esse repudiandae.
+            </a></li>
+          </ul>
+        </div>
+        <div class="col-6 col-md">
+          <h5 class="footer-links">Social Links</h5>
+          <ul class="list-unstyled text-small">
+            <li><a class="text-muted" href="#"></a></li>
+            <li style="display: inline-block;margin-left: 0px;"><a class="text-muted-main"
+                href="https://instagram.com/"><i class="fa fa-instagram"></i></a></li>
+            <li style="display: inline-block;margin-left: 10px;"><a class="text-muted-main"
+                href="https://facebook.com/"><i class="fa fa-facebook"></i></a></li>
+            <li style="display: inline-block;margin-left: 10px;"><a class="text-muted-main"
+                href="https://twitter.com/"><i class="fa fa-twitter"></i></a></li>
+            <li style="display: inline-block;margin-left: 10px;"><a class="text-muted-main" href="https://quora.com/"><i
+                  class="fa fa-quora"></i></a></li>
+            <center>
+              <hr
+                style="width: 80vw;display: block!important;display: block;position: absolute;left: 50%;transform: translateX(-50%);margin-top: 25vh;color: white">
+            </center>
+            <center>
+              <h5
+                style="display: block!important;display: block;position: absolute;left: 50%;transform: translateX(-50%);margin-top: 30vh;color: white;font-family: rubik;">
+                Made With &nbsp<i class="fa fa-heart" style="color: red"></i>&nbsp HTML, CSS, JS, jQuery And Bootstrap
+              </h5>
+            </center>
+          </ul>
+        </div>
+      </div>
+    </footer>
+  </div>
+  </section>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            $(window).scroll(function () {
+                var scroll = $(window).scrollTop();
+                if (scroll > 600) {
+                    $(".main-bg").css("background", "#000");
+                }
+
+                else {
+                    $(".main-bg").css("background", "transparent");
+                }
+            })
+        })
+    </script>
+</body>
+</html>
