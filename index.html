@@ -13,13 +13,15 @@
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
   <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
   <script src="bootstrap.min.js"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" integrity="sha512-1ycn6IcaQQ40/MKBW2W4Rhis/DbILU74C1vSrLJxCq57o941Ym01SwNsOMqvEBFlcgUa6xLiPY/NS5R+E6ztJQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css" />
   <link rel="icon" href="Images/icon.png">
   <style>
     * {
       margin: 0;
       padding: 0;
       box-sizing: border-box;
-      font-family: 'Poppins', sans-serif;
+      font-family: 'Poppins', sans-serif!important;
     }
 @media(max-width: 1500px){
   .head{
@@ -34,9 +36,7 @@
   .container{
     max-width: 100%;
   }
-  a{
-    font-size: 25px;
-  }
+
   .blog-heading{
     font-size: 25px;
   }
@@ -246,117 +246,317 @@
       background-color: #0d6efd;
       border: 2px solid #0d6efd;
     }
-
-    .footer {
-  position: absolute;
-  left: 50%;
-  background-color: #222831;
-  -webkit-transform: translateX(-50%);
-          transform: translateX(-50%);
-  padding: 10px;
-  width: 100%;
-  margin: auto;
-  height: 500px;
+    .footer-widget p {
+    margin-bottom: 27px;
+}
+p {
+    font-family: 'Nunito', sans-serif;
+    font-size: 16px;
+  color:white;
+    line-height: 28px;
 }
 
-.text-muted {
-  color: white !important;
-  font-family: Rubik;
-  text-decoration: none;
-}
-
-.text-muted-main {
-  color: white !important;
-  font-family: Rubik;
-  cursor: pointer !important;
-  text-decoration: none;
-}
-
-.fa {
-  cursor: pointer;
-}
-
-.text-muted-main:hover {
-  color: #0d6efd !important;
-}
-
-.main-div-3:hover {
-  -webkit-box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
-          box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
-  margin-top: -10px;
+   .animate-border {
   position: relative;
-  top: -10px;
-}
+  display: block;
+  width: 115px;
+  height: 3px;
+  background: #007bff; }
 
-.main-div-3 {
-  padding: 70px;
-  display: inline-block;
-  width: 350px;
-  -webkit-box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
-          box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
-  height: 250px;
-}
+.animate-border:after {
+  position: absolute;
+  content: "";
+  width: 35px;
+  height: 3px;
+  left: 0;
+  bottom: 0;
+  border-left: 10px solid #fff;
+  border-right: 10px solid #fff;
+  -webkit-animation: animborder 2s linear infinite;
+  animation: animborder 2s linear infinite; }
 
-.insta {
-  color: red;
-}
+@-webkit-keyframes animborder {
+  0% {
+    -webkit-transform: translateX(0px);
+    transform: translateX(0px); }
+  100% {
+    -webkit-transform: translateX(113px);
+    transform: translateX(113px); } }
 
-.insta:hover {
-  color: #ff009d !important;
-}
+@keyframes animborder {
+  0% {
+    -webkit-transform: translateX(0px);
+    transform: translateX(0px); }
+  100% {
+    -webkit-transform: translateX(113px);
+    transform: translateX(113px); } }
 
-.bg-light {
-  padding: 20px;
-}
+.animate-border.border-white:after {
+  border-color: #fff; }
 
-@media (max-width: 970px) {
-  .bg-3 {
-    width: auto !important;
-  }
-  .bg-4 {
-    width: auto !important;
-  }
-  .lead {
-    width: auto !important;
-  }
-}
+.animate-border.border-yellow:after {
+  border-color: #F5B02E; }
 
-@media (max-width: 800px) {
-  .main-div-1 {
-    margin-bottom: 0px !important;
-  }
-  .main-div-2 {
-    margin-bottom: 0px !important;
-    margin-top: 15px !important;
-  }
-  .ms-5{
-      margin-left: 0px!important;
-      display: block;
-  }
-  .me-5{
-      margin-right: 0px!important;
-      display: block;
-  }
-}
+.animate-border.border-orange:after {
+  border-right-color: #007bff;
+  border-left-color: #007bff; }
 
-@media (max-width: 1120px) {
-  .main-div-3 {
-    display: none;
-  }
-}
+.animate-border.border-ash:after {
+  border-right-color: #EEF0EF;
+  border-left-color: #EEF0EF; }
 
-@media (max-width: 330px) {
-  .footer {
-    overflow-y: scroll;
-    overflow-x: hidden !important;
-  }
-}
-.container-fluid{
-    overflow: hidden;
-}
-.footer-links{
+.animate-border.border-offwhite:after {
+  border-right-color: #F7F9F8;
+  border-left-color: #F7F9F8; }
+
+/* Animated heading border */
+@keyframes primary-short {
+  0% {
+    width: 15%; }
+  50% {
+    width: 90%; }
+  100% {
+    width: 10%; } }
+
+@keyframes primary-long {
+  0% {
+    width: 80%; }
+  50% {
+    width: 0%; }
+  100% {
+    width: 80%; } } 
+
+.dk-footer {
+  padding: 75px 0 0;
+  background-color: #151414;
+  position: relative;
+  z-index: 2; }
+  .dk-footer .contact-us {
+    margin-top: 0;
+    margin-bottom: 30px;
+    padding-left: 80px; }
+    .dk-footer .contact-us .contact-info {
+      margin-left: 50px; }
+    .dk-footer .contact-us.contact-us-last {
+      margin-left: -80px; }
+  .dk-footer .contact-icon i {
+    font-size: 24px;
+    top: -15px;
+    position: relative;
+    color:#007bff; }
+
+.dk-footer-box-info {
+  position: absolute;
+  top: -122px;
+  background: #202020;
+  padding: 40px;
+  z-index: 2; }
+  .dk-footer-box-info .footer-social-link h3 {
+    color: #fff;
+    font-size: 24px;
+    margin-bottom: 25px; }
+  .dk-footer-box-info .footer-social-link ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0; }
+  .dk-footer-box-info .footer-social-link li {
+    display: inline-block; }
+  .dk-footer-box-info .footer-social-link a i {
+    display: block;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    text-align: center;
+    line-height: 40px;
+    background: #000;
+    margin-right: 5px;
+    color: #fff; }
+    .dk-footer-box-info .footer-social-link a i.fa-facebook {
+      background-color: #3B5998; }
+    .dk-footer-box-info .footer-social-link a i.fa-twitter {
+      background-color: #55ACEE; }
+    .dk-footer-box-info .footer-social-link a i.fa-google-plus {
+      background-color: #DD4B39; }
+    .dk-footer-box-info .footer-social-link a i.fa-linkedin {
+      background-color: #0976B4; }
+    .dk-footer-box-info .footer-social-link a i.fa-instagram {
+      background-color: #B7242A; }
+
+.footer-awarad {
+  margin-top: 285px;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-flex: 0;
+  -webkit-flex: 0 0 100%;
+  -moz-box-flex: 0;
+  -ms-flex: 0 0 100%;
+  flex: 0 0 100%;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+  -moz-box-align: center;
+  -ms-flex-align: center;
+  align-items: center; }
+  .footer-awarad p {
+    color: #fff;
+    font-size: 24px;
+    font-weight: 700;
+    margin-left: 20px;
+    padding-top: 15px; }
+
+.footer-info-text {
+  margin: 26px 0 32px; }
+
+.footer-left-widget {
+  padding-left: 80px; }
+
+.footer-widget .section-heading {
+  margin-bottom: 35px; }
+
+.footer-widget h3 {
+  font-size: 24px;
+  color: #fff;
+  position: relative;
+  margin-bottom: 15px;
+  max-width: -webkit-fit-content;
+  max-width: -moz-fit-content;
+  max-width: fit-content; }
+
+.footer-widget ul {
+  width: 50%;
+  float: left;
+  list-style: none;
+  margin: 0;
+  padding: 0; }
+
+.footer-widget li {
+  margin-bottom: 18px; }
+
+.footer-widget p {
+  margin-bottom: 27px; }
+
+.footer-widget a {
+  color: #878787;
+  -webkit-transition: all 0.3s;
+  -o-transition: all 0.3s;
+  transition: all 0.3s; }
+  .footer-widget a:hover {
+    color: #007bff; }
+
+.footer-widget:after {
+  content: "";
+  display: block;
+  clear: both; }
+
+.dk-footer-form {
+  position: relative; }.dk-footer-form input[type=email] {
+    padding: 14px 28px;
+    border-radius: 50px;
     color: white;
+    background: #2E2E2E;
+    border: 1px solid #2E2E2E;
 }
+  .dk-footer-form input::-webkit-input-placeholder, .dk-footer-form input::-moz-placeholder, .dk-footer-form input:-ms-input-placeholder, .dk-footer-form input::-ms-input-placeholder, .dk-footer-form input::-webkit-input-placeholder {
+    color: #878787;
+    font-size: 14px; }
+  .dk-footer-form input::-webkit-input-placeholder, .dk-footer-form input::-moz-placeholder, .dk-footer-form input:-ms-input-placeholder, .dk-footer-form input::-ms-input-placeholder, .dk-footer-form input::placeholder {
+    color: #878787;
+    font-size: 14px; }
+  .dk-footer-form button[type=submit] {
+    position: absolute;
+    top: 0;
+    right: 0;
+    padding: 15px 24px 12px 17px;
+    border-top-right-radius: 25px;
+    border-bottom-right-radius: 25px;
+    border: 1px solid #007bff;
+    background: #007bff;
+    color: #fff; }
+  .dk-footer-form button:hover {
+    cursor: pointer; }
+
+/* ==========================
+
+    Contact
+
+=============================*/
+.contact-us {
+  position: relative;
+  z-index: 2;
+  margin-top: 65px;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+  -moz-box-align: center;
+  -ms-flex-align: center;
+  align-items: center; }
+
+.contact-icon {
+  position: absolute; }
+  .contact-icon i {
+    font-size: 36px;
+    top: -5px;
+    position: relative;
+    color: #007bff; }
+
+.contact-info {
+  margin-left: 75px;
+  color: #fff; }
+  .contact-info h3 {
+    font-size: 20px;
+    color: #fff;
+    margin-bottom: 0; }
+
+.copyright {
+  padding: 28px 0;
+  margin-top: 55px;
+  background-color: #202020; }
+  .copyright span,
+  .copyright a {
+    color: #878787;
+    -webkit-transition: all 0.3s linear;
+    -o-transition: all 0.3s linear;
+    transition: all 0.3s linear; }
+  .copyright a:hover {
+    color:#007bff; }
+
+.copyright-menu ul {
+  text-align: right;
+  margin: 0; }
+
+.copyright-menu li {
+  display: inline-block;
+  padding-left: 20px; }
+
+.back-to-top {
+  position: relative;
+  z-index: 2; }
+  .back-to-top .btn-dark {
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+    padding: 0;
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background: #2e2e2e;
+    border-color: #2e2e2e;
+    display: none;
+    z-index: 999;
+    -webkit-transition: all 0.3s linear;
+    -o-transition: all 0.3s linear;
+    transition: all 0.3s linear; }
+    .back-to-top .btn-dark:hover {
+      cursor: pointer;
+      background: #FA6742;
+      border-color: #FA6742; }
+      
     .pager-btn {
       width: 40px;
       height: 40px;
@@ -633,64 +833,205 @@
       </center>
     </div>
   </div>
+  <!-- footer -->
   
-  <!-- Footer -->
-  <div class="container-fluid footer" style="margin-top: 8rem;">
-    <footer class="pt-4 my-md-5 pt-md-5 border-to">
+<footer id="dk-footer text-white mt-5" class="dk-footer">
+  <div class="container">
       <div class="row">
-        <div class="col-12 col-md">
-         <h3 class="text-white">Divi<span style="color: #0d6efd">Blog</span></h3>
-          <small class="d-block mb-3 text-muted">&copy; 2021-2022</small>
-        </div>
-        <div class="col-6 col-md">
-          <h5 class="footer-links">Features</h5>
-          <ul class="list-unstyled text-small">
-            <li><a class="text-muted" href="#">Blog design</a></li>
-            <li><a class="text-muted" href="#">SEO specialists</a></li>
-            <li><a class="text-muted" href="#">Experienced Writers</a></li>
-          </ul>
-        </div>
-        <div class="col-6 col-md">
-          <h5 class="footer-links">What we provide</h5>
-          <ul class="list-unstyled text-small">
-            <li><a class="text-muted" href="#Home">Keyword research</a></li>
-            <li><a class="text-muted" href="#Home">On Page SEO</a></li>
-            <li><a class="text-muted" href="#Home">Backlinks</a></li>
-          </ul>
-        </div>
-        <div class="col-6 col-md">
-          <h5 class="footer-links">About</h5>
-          <ul class="list-unstyled text-small">
-            <li><a class="text-muted" href="#">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nostrum qui voluptas officiis quos esse repudiandae.
-            </a></li>
-          </ul>
-        </div>
-        <div class="col-6 col-md">
-          <h5 class="footer-links">Social Links</h5>
-          <ul class="list-unstyled text-small">
-            <li><a class="text-muted" href="#"></a></li>
-            <li style="display: inline-block;margin-left: 0px;"><a class="text-muted-main"
-                href="https://instagram.com/"><i class="fa fa-instagram"></i></a></li>
-            <li style="display: inline-block;margin-left: 10px;"><a class="text-muted-main"
-                href="https://facebook.com/"><i class="fa fa-facebook"></i></a></li>
-            <li style="display: inline-block;margin-left: 10px;"><a class="text-muted-main"
-                href="https://twitter.com/"><i class="fa fa-twitter"></i></a></li>
-            <li style="display: inline-block;margin-left: 10px;"><a class="text-muted-main" href="https://quora.com/"><i
-                  class="fa fa-quora"></i></a></li>
-            <center>
-              <hr
-                style="width: 80vw;display: block!important;display: block;position: absolute;left: 50%;transform: translateX(-50%);margin-top: 25vh;color: white">
-            </center>
-            <center>
-              <h5
-                style="display: block!important;display: block;position: absolute;left: 50%;transform: translateX(-50%);margin-top: 30vh;color: white;font-family: rubik;">
-                Made With &nbsp<i class="fa fa-heart" style="color: red"></i>&nbsp HTML, CSS, JS, jQuery And Bootstrap
-              </h5>
-            </center>
-          </ul>
-        </div>
+          <div class="col-md-12 col-lg-4">
+              <div class="dk-footer-box-info">
+                  <a href="index.html" class="footer-logo">
+                      <h3 class="img-fluid">Divi<span class="text-primary">Blog</span></h3>
+                  </a>
+                  <p class="footer-info-text">
+                     Reference site about Lorem Ipsum, giving information on its origins, as well as a random Lipsum generator.
+                  </p>
+                  <div class="footer-social-link">
+                      <h3>Follow us</h3>
+                      <ul>
+                          <li>
+                              <a href="#">
+                                  <i class="fa fa-facebook"></i>
+                              </a>
+                          </li>
+                          <li>
+                              <a href="#">
+                                  <i class="fa fa-twitter"></i>
+                              </a>
+                          </li>
+                          <li>
+                              <a href="#">
+                                  <i class="fa fa-google-plus"></i>
+                              </a>
+                          </li>
+                          <li>
+                              <a href="#">
+                                  <i class="fa fa-linkedin"></i>
+                              </a>
+                          </li>
+                          <li>
+                              <a href="#">
+                                  <i class="fa fa-instagram"></i>
+                              </a>
+                          </li>
+                      </ul>
+                  </div>
+                  <!-- End Social link -->
+              </div>
+              <!-- End Footer info -->
+              <div class="footer-awarad">
+                  <img src="images/icon/best.png" alt="">
+                  <p>Best Design Company 2019</p>
+              </div>
+          </div>
+          <!-- End Col -->
+          <div class="col-md-12 col-lg-8">
+              <div class="row">
+                  <div class="col-md-6">
+                      <div class="contact-us">
+                          <div class="contact-icon">
+                              <i class="fa fa-map-o" aria-hidden="true"></i>
+                          </div>
+                          <!-- End contact Icon -->
+                          <div class="contact-info">
+                              <h3>Jaipur India</h3>
+                              <p>5353 Road Avenue</p>
+                          </div>
+                          <!-- End Contact Info -->
+                      </div>
+                      <!-- End Contact Us -->
+                  </div>
+                  <!-- End Col -->
+                  <div class="col-md-6">
+                      <div class="contact-us contact-us-last">
+                          <div class="contact-icon">
+                              <i class="fa fa-volume-control-phone" aria-hidden="true"></i>
+                          </div>
+                          <!-- End contact Icon -->
+                          <div class="contact-info">
+                              <h3>95 711 9 5353</h3>
+                              <p>Give us a call</p>
+                          </div>
+                          <!-- End Contact Info -->
+                      </div>
+                      <!-- End Contact Us -->
+                  </div>
+                  <!-- End Col -->
+              </div>
+              <!-- End Contact Row -->
+              <div class="row">
+                  <div class="col-md-12 col-lg-6">
+                      <div class="footer-widget footer-left-widget">
+                          <div class="section-heading">
+                              <h3>Useful Links</h3>
+                              <span class="animate-border border-black"></span>
+                          </div>
+                          <ul>
+                              <li>
+                                  <a href="#">About us</a>
+                              </li>
+                              <li>
+                                  <a href="#">Services</a>
+                              </li>
+                              <li>
+                                  <a href="#">Projects</a>
+                              </li>
+                              <li>
+                                  <a href="#">Our Team</a>
+                              </li>
+                          </ul>
+                          <ul>
+                              <li>
+                                  <a href="#">Contact us</a>
+                              </li>
+                              <li>
+                                  <a href="#">Blog</a>
+                              </li>
+                              <li>
+                                  <a href="#">Testimonials</a>
+                              </li>
+                              <li>
+                                  <a href="#">Faq</a>
+                              </li>
+                          </ul>
+                      </div>
+                      <!-- End Footer Widget -->
+                  </div>
+                  <!-- End col -->
+                  <div class="col-md-12 col-lg-6">
+                      <div class="footer-widget">
+                          <div class="section-heading">
+                              <h3>Subscribe</h3>
+                              <span class="animate-border border-black"></span>
+                          </div>
+                          <p><!-- Don’t miss to subscribe to our new feeds, kindly fill the form below. -->
+                          Reference site about Lorem Ipsum, giving information on its origins, as well.</p>
+                          <form action="#">
+                              <div class="form-row">
+                                  <div class="col dk-footer-form">
+                                      <input type="email" class="form-control" placeholder="Email Address">
+                                      <button type="submit">
+                                          <i class="fa fa-send"></i>
+                                      </button>
+                                  </div>
+                              </div>
+                          </form>
+                          <!-- End form -->
+                      </div>
+                      <!-- End footer widget -->
+                  </div>
+                  <!-- End Col -->
+              </div>
+              <!-- End Row -->
+          </div>
+          <!-- End Col -->
       </div>
-    </footer>
+      <!-- End Widget Row -->
+  </div>
+  <!-- End Contact Container -->
+
+
+  <div class="copyright">
+      <div class="container">
+          <div class="row">
+              <div class="col-md-6">
+                  <span>Copyright © 2019, All Right Reserved Seobin</span>
+              </div>
+              <!-- End Col -->
+              <div class="col-md-6">
+                  <div class="copyright-menu">
+                      <ul>
+                          <li>
+                              <a href="#">Home</a>
+                          </li>
+                          <li>
+                              <a href="#">Terms</a>
+                          </li>
+                          <li>
+                              <a href="#">Privacy Policy</a>
+                          </li>
+                          <li>
+                              <a href="#">Contact</a>
+                          </li>
+                      </ul>
+                  </div>
+              </div>
+              <!-- End col -->
+          </div>
+          <!-- End Row -->
+      </div>
+      <!-- End Copyright Container -->
+  </div>
+  <!-- End Copyright -->
+  <!-- Back to top -->
+  <div id="back-to-top" class="back-to-top">
+      <button class="btn btn-dark" title="Back to Top" style="display: block;">
+          <i class="fa fa-angle-up"></i>
+      </button>
+  </div>
+  <!-- End Back to top -->
+</footer>
+
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
   <script>
     $(document).ready(function () {
