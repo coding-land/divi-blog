@@ -1,0 +1,1059 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Divi Blog</title>
+    <link rel="stylesheet" href="bootstrap.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+    <script src="bootstrap.min.js"></script>  
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" integrity="sha512-1ycn6IcaQQ40/MKBW2W4Rhis/DbILU74C1vSrLJxCq57o941Ym01SwNsOMqvEBFlcgUa6xLiPY/NS5R+E6ztJQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css" />    
+    <link rel="icon" href="Images/icon.png">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Poppins', sans-serif!important;
+        }
+        .container{
+            overflow-x: hidden!important;
+        }
+        .content {
+            margin-left: 50px;
+            margin-top: 40px;
+        }
+
+        .sidebar {
+            padding-left: 100px;
+        }
+
+        input {
+            width: 100%;
+            padding-left: 10px;
+            outline: none;
+            border-radius: 2px;
+            border: 1px solid grey;
+            height: 50px;
+        }
+
+        .img {
+            width: 100%;
+            height: 70vh;
+            margin-left: 50px;
+        }
+
+        .container {
+            margin-top: 40px;
+        }
+
+        .main-container {
+            width: 100%;
+            height: 100vh;
+            background-image: url('Images/main-image.jpg');
+            background-size: cover;
+            background-position: 95% 50%;
+            background-repeat: no-repeat;
+            position: relative;
+        }
+
+        .head svg {
+            color: white
+        }
+
+        .image-overlay {
+            background: linear-gradient(to bottom, #ff33cc 0%, #33cccc 100%);
+            position: absolute;
+            width: 100%;
+            height: 100vh;
+            opacity: 0.7;
+        }
+
+        input{
+         width: 97%;
+     }
+        .heading {
+            opacity: 1;
+            color: white;
+            font-size: 100px;
+            font-weight: bolder;
+        }
+
+        @media(max-width: 1470px) {
+            .sidebar {
+                padding-left: 10px;
+            }
+
+            .content {
+                margin-left: 0px;
+            }
+
+            input{
+         width: 97%;
+     }
+            .img {
+                margin-left: 0px;
+            }
+
+            .container {
+                width: 100%;
+                max-width: 100%;
+            }
+        }
+
+        @media(max-width: 1699px) {
+            .sidebar {
+                padding-left: 10px;
+            }
+
+            .content {
+                margin-left: 0px !important;
+            }
+            
+     input{
+         width: 97%;
+     }
+
+            .img {
+                margin-left: 0px !important;
+                width: 100%;
+            }
+        }
+
+        @media(max-width: 1300px) {
+            .sidebar {
+                padding-left: 10px;
+            }
+
+            .content {
+                margin-left: 0px;
+            }
+
+            .img {
+                margin-left: 0px;
+                width: 100%;
+                height: 20%;
+            }
+     input{
+         width: 97%;
+     }
+            .container {
+                width: 100vw !important;
+                max-width: 100vw !important;
+            }
+
+            img,
+            svg {
+                vertical-align: middle;
+                width: 96%;
+            }
+
+            .head svg {
+                color: white;
+                width: auto;
+            }
+        }
+
+        @media (min-width: 1700px) and (max-width: 2500px) {
+            .sidebar {
+                padding-left: 10px;
+            }
+
+            .content {
+                margin-left: 0px;
+            }
+
+            input{
+         width: 97%;
+     }
+            .img {
+                margin-left: 0px;
+                width: 100%;
+            }
+
+            .container {
+                width: 100vw !important;
+                max-width: 100vw !important;
+            }
+
+            img,
+            svg {
+                vertical-align: middle;
+                width: 100%;
+            }
+
+            .head svg {
+                color: white;
+                width: auto;
+            }
+        }
+
+        .head {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+
+        @media(max-width: 400px) {
+            .heading {
+                opacity: 1;
+                color: white;
+                font-size: 70px;
+                font-weight: bolder;
+            }
+
+            .img {
+                width: 100%;
+                height: 9%;
+            }
+
+            .h5,
+            h5 {
+                font-size: 1rem;
+            }
+            .col-xs-11 {
+    flex: 0 0 auto;
+    width: 100%;
+}
+        }
+
+        @media(max-width: 775px) {
+            .img {
+                width: 100%!important;
+                height: 16%;
+                margin: auto
+            }
+            .col-sm-11 {
+    flex: 0 0 auto;
+    width: 100%;
+}
+
+            img,
+            svg {
+                vertical-align: middle;
+                width: 93vw;
+            }
+        }
+
+        .comment {
+            width: 70%;
+            height: 50px;
+            outline: none;
+            border: 1px solid grey;
+            display: inline-block;
+            margin-top: 10px;
+            margin-right: 10px;
+        }
+
+        .btn-outline-primary {
+            border-radius: 3px;
+            height: 50px;
+            width: 50px;
+            margin-top: -4px;
+        }
+        .author{
+            background-color: #efefef;
+            width: 100%;
+            height: 300px;
+            padding: 25px;
+            position: relative;
+            margin-top: 40px;
+        }
+        .profile{
+            background: url('Images/profile.jpg');
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-position: center center;
+            width: 250px;
+            border-radius: 3px;
+            height: 250px;
+            display: inline-flex;
+        }
+        .about { 
+        width: 60%;
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        display: inline-block;
+        padding-left: 20px;
+        }
+        
+        @media(max-width: 1100px){
+            .about{
+                width: 100%;
+    position: initial;
+    top: 50%;
+    margin-top: 17px;
+    flex-wrap: wrap;
+    transform: initial;
+    display: block;
+    padding-left: 0px;
+            }
+            .profile{
+              width: 100%;
+            }
+            .author{
+                width: 100%;
+                height: 600px;
+            }
+        }
+@media(max-width: 500px){
+    .sidebar{
+        margin-top: 200px;
+    }
+}
+
+@media(max-width: 375px){
+    .sidebar{
+        margin-top: 425px;
+    }
+}
+
+.footer-widget p {
+    margin-bottom: 27px;
+}
+p {
+    font-size: 16px;
+
+    line-height: 28px;
+}
+
+   .animate-border {
+  position: relative;
+  display: block;
+  width: 115px;
+  height: 3px;
+  background: #007bff; }
+
+.animate-border:after {
+  position: absolute;
+  content: "";
+  width: 35px;
+  height: 3px;
+  left: 0;
+  bottom: 0;
+  border-left: 10px solid #fff;
+  border-right: 10px solid #fff;
+  -webkit-animation: animborder 2s linear infinite;
+  animation: animborder 2s linear infinite; }
+
+@-webkit-keyframes animborder {
+  0% {
+    -webkit-transform: translateX(0px);
+    transform: translateX(0px); }
+  100% {
+    -webkit-transform: translateX(113px);
+    transform: translateX(113px); } }
+
+@keyframes animborder {
+  0% {
+    -webkit-transform: translateX(0px);
+    transform: translateX(0px); }
+  100% {
+    -webkit-transform: translateX(113px);
+    transform: translateX(113px); } }
+
+.animate-border.border-white:after {
+  border-color: #fff; }
+
+.animate-border.border-yellow:after {
+  border-color: #F5B02E; }
+
+.animate-border.border-orange:after {
+  border-right-color: #007bff;
+  border-left-color: #007bff; }
+
+.animate-border.border-ash:after {
+  border-right-color: #EEF0EF;
+  border-left-color: #EEF0EF; }
+
+.animate-border.border-offwhite:after {
+  border-right-color: #F7F9F8;
+  border-left-color: #F7F9F8; }
+
+/* Animated heading border */
+@keyframes primary-short {
+  0% {
+    width: 15%; }
+  50% {
+    width: 90%; }
+  100% {
+    width: 10%; } }
+
+@keyframes primary-long {
+  0% {
+    width: 80%; }
+  50% {
+    width: 0%; }
+  100% {
+    width: 80%; } } 
+
+.dk-footer {
+  padding: 75px 0 0;
+  background-color: #151414;
+  position: relative;
+  z-index: 2; }
+  .dk-footer .contact-us {
+    margin-top: 0;
+    margin-bottom: 30px;
+    padding-left: 80px; }
+    .dk-footer .contact-us .contact-info {
+      margin-left: 50px; }
+    .dk-footer .contact-us.contact-us-last {
+      margin-left: -80px; }
+  .dk-footer .contact-icon i {
+    font-size: 24px;
+    top: -15px;
+    position: relative;
+    color:#007bff; }
+
+.dk-footer-box-info {
+  position: absolute;
+  top: -122px;
+  background: #202020;
+  padding: 40px;
+  z-index: 2; }
+  .dk-footer-box-info .footer-social-link h3 {
+    color: #fff;
+    font-size: 24px;
+    margin-bottom: 25px; }
+  .dk-footer-box-info .footer-social-link ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0; }
+  .dk-footer-box-info .footer-social-link li {
+    display: inline-block; }
+  .dk-footer-box-info .footer-social-link a i {
+    display: block;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    text-align: center;
+    line-height: 40px;
+    background: #000;
+    margin-right: 5px;
+    color: #fff; }
+    .dk-footer-box-info .footer-social-link a i.fa-facebook {
+      background-color: #3B5998; }
+    .dk-footer-box-info .footer-social-link a i.fa-twitter {
+      background-color: #55ACEE; }
+    .dk-footer-box-info .footer-social-link a i.fa-google-plus {
+      background-color: #DD4B39; }
+    .dk-footer-box-info .footer-social-link a i.fa-linkedin {
+      background-color: #0976B4; }
+    .dk-footer-box-info .footer-social-link a i.fa-instagram {
+      background-color: #B7242A; }
+
+.footer-awarad {
+  margin-top: 285px;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-flex: 0;
+  -webkit-flex: 0 0 100%;
+  -moz-box-flex: 0;
+  -ms-flex: 0 0 100%;
+  flex: 0 0 100%;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+  -moz-box-align: center;
+  -ms-flex-align: center;
+  align-items: center; }
+  .footer-awarad p {
+    color: #fff;
+    font-size: 24px;
+    font-weight: 700;
+    margin-left: 20px;
+    padding-top: 15px; }
+
+.footer-info-text {
+  margin: 26px 0 32px;
+color: white
+; }
+
+.footer-left-widget {
+  padding-left: 80px; }
+
+.footer-widget .section-heading {
+  margin-bottom: 35px; }
+
+.footer-widget h3 {
+  font-size: 24px;
+  color: #fff;
+  position: relative;
+  margin-bottom: 15px;
+  max-width: -webkit-fit-content;
+  max-width: -moz-fit-content;
+  max-width: fit-content; }
+
+.footer-widget ul {
+  width: 50%;
+  float: left;
+  list-style: none;
+  margin: 0;
+  padding: 0; }
+
+.footer-widget li {
+  margin-bottom: 18px; }
+
+.footer-widget p {
+  margin-bottom: 27px; }
+
+.footer-widget a {
+  color: #878787;
+  -webkit-transition: all 0.3s;
+  -o-transition: all 0.3s;
+  transition: all 0.3s; }
+  .footer-widget a:hover {
+    color: #007bff; }
+
+.footer-widget:after {
+  content: "";
+  display: block;
+  clear: both; }
+
+.dk-footer-form {
+  position: relative; }
+.dk-footer-form input[type=email] {
+    padding: 14px 28px;
+    border-radius: 50px;
+    color: white;
+    background: #2E2E2E;
+    border: 1px solid #2E2E2E;
+}
+  .dk-footer-form input::-webkit-input-placeholder, .dk-footer-form input::-moz-placeholder, .dk-footer-form input:-ms-input-placeholder, .dk-footer-form input::-ms-input-placeholder, .dk-footer-form input::-webkit-input-placeholder {
+    color: #878787;
+    font-size: 14px; }
+  .dk-footer-form input::-webkit-input-placeholder, .dk-footer-form input::-moz-placeholder, .dk-footer-form input:-ms-input-placeholder, .dk-footer-form input::-ms-input-placeholder, .dk-footer-form input::placeholder {
+    color: #878787;
+    font-size: 14px; }
+    .dk-footer-form button[type=submit] {
+    position: absolute;
+    top: 0;
+    right: 0;
+    padding: 12px 24px 12px 17px;
+    border-top-right-radius: 25px;
+    border-bottom-right-radius: 25px;
+    border: 1px solid #007bff;
+    background: #007bff;
+    color: #fff;
+}
+/* ==========================
+
+    Contact
+
+=============================*/
+.contact-us {
+  position: relative;
+  z-index: 2;
+  margin-top: 65px;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+  -moz-box-align: center;
+  -ms-flex-align: center;
+  align-items: center; }
+
+.contact-icon {
+  position: absolute; }
+  .contact-icon i {
+    font-size: 36px;
+    top: -5px;
+    position: relative;
+    color: #007bff; }
+
+.contact-info {
+  margin-left: 75px;
+  color: #fff; }
+  .contact-info h3 {
+    font-size: 20px;
+    color: #fff;
+    margin-bottom: 0; }
+
+.copyright {
+  padding: 28px 0;
+  margin-top: 55px;
+  background-color: #202020; }
+  .copyright span,
+  .copyright a {
+    color: #878787;
+    -webkit-transition: all 0.3s linear;
+    -o-transition: all 0.3s linear;
+    transition: all 0.3s linear; }
+  .copyright a:hover {
+    color:#007bff; }
+a{
+    text-decoration: none!important;
+}
+
+.lead {
+    font-size: 1.25rem;
+    font-weight: 300;
+    color: grey!important;
+}
+.copyright-menu ul {
+  text-align: right;
+  margin: 0; }
+
+.copyright-menu li {
+  display: inline-block;
+  padding-left: 20px; }
+
+.back-to-top {
+  position: relative;
+  z-index: 2; }
+  .back-to-top .btn-dark {
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+    padding: 0;
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background: #2e2e2e;
+    border-color: #2e2e2e;
+    display: none;
+    z-index: 999;
+    -webkit-transition: all 0.3s linear;
+    -o-transition: all 0.3s linear;
+    transition: all 0.3s linear; }
+    .back-to-top .btn-dark:hover {
+      cursor: pointer;
+      background: #FA6742;
+      border-color: #FA6742; }
+
+    </style>
+</head>
+
+<body>
+    <!-- Articles Page -->
+    <div class="main-container">
+        <div class="image-overlay"></div>
+        <div class="head">
+            <h1 class="heading">Divi<span class="text-primary">Blog</span></h1>
+            <div class="m-auto">
+                <center>
+                    <h5 style="display: inline-block;color: white;">Home</h5>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                        class="bi bi-chevron-right" viewBox="0 0 16 16">
+                        <path fill-rule="evenodd"
+                            d="M4.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L10.293 8 4.646 2.354a.5.5 0 0 1 0-.708z" />
+                    </svg>
+                    <h5 style="display: inline-block;color: white;">Blog</h5>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                        class="bi bi-chevron-right" viewBox="0 0 16 16">
+                        <path fill-rule="evenodd"
+                            d="M4.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L10.293 8 4.646 2.354a.5.5 0 0 1 0-.708z" />
+                    </svg>
+                    <h5 style="display: inline-block;color: white;">Single Blog Post</h5>
+                </center>
+            </div>
+        </div>
+        <nav class="navbar navbar-expand-lg navbar-dark main-bg fixed-top" style="padding: 40px;">
+            <div class="container-fluid">
+                <a class="navbar-brand" href="#">Divi<span class="text-primary">Blog</span></a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                    aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+                        <li class="nav-item">
+                          <a class="nav-link me-4" aria-current="page" href="index.html">Home</a>
+                        </li>
+                        <li class="nav-item">
+                          <a class="nav-link active me-4" href="index2.html">Articles</a>
+                        </li>
+                        <li class="nav-item">
+                          <a class="nav-link me-4" href="index3.html">Team</a>
+                        </li>
+                        <li class="nav-item">
+                          <a class="nav-link me-4" href="index4.html">Contact</a>
+                        </li>
+                      </ul>
+                </div>
+            </div>
+        </nav>
+    </div>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-7 col-sm-11 col-xs-12 col-xl-7">
+                <img src="Images/blog5.jpg" class="img">
+                <div class="content">
+                    <h1>How to develop an app</h1>
+                    <p class="text-secondary">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Pariatur
+                        deleniti veritatis blanditiis cumque ducimus officiis quisquam accusantium. Nesciunt assumenda,
+                        quibusdam similique architecto saepe fugit autem eius nam quam pariatur expedita at sequi ea
+                        voluptatem, nobis deleniti omnis, iusto doloremque distinctio culpa? Deserunt, natus nihil, odio
+                        facere quasi laborum explicabo tempore ad iste sint, consequatur beatae quaerat ab. Odio,
+                        tempora.</p>
+                </div>
+                <img src="Images/blog3.jpg" class="img">
+                <div class="content">
+                    <h1>But what laptop we should choose?</h1>
+                    <p class="text-secondary">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Pariatur
+                        deleniti veritatis blanditiis cumque ducimus officiis quisquam accusantium. Nesciunt assumenda,
+                        quibusdam similique architecto saepe fugit autem eius nam quam pariatur expedita at sequi ea
+                        voluptatem, nobis deleniti omnis, iusto doloremque distinctio culpa? Deserunt, natus nihil, odio
+                        facere quasi laborum explicabo tempore ad iste sint, consequatur beatae quaerat ab. Odio,
+                        tempora.</p>
+                    <a class="btn btn-outline-dark">Laptop</a>
+                    <a class="btn btn-outline-dark">Development</a>
+                    <a class="btn btn-outline-dark">PC</a>
+                    <div class="main-comment my-5">
+                        <img src="Images/main-image.jpg" style="border-radius: 50%;height: 80px;width: 80px;">
+                        <span class="mx-2">Amazing Post keep it up!</span>
+                        <br><br>
+                        <img src="Images/main-image.jpg" style="border-radius: 50%;height: 80px;width: 80px;">
+                        <span class="mx-2">Make a post on gaming! we all love gaming</span>
+                        <br><br>
+                        <img src="Images/main-image.jpg" style="border-radius: 50%;height: 80px;width: 80px;">
+                        <span class="mx-2">I have shared your post!</span>
+                    </div>
+                    <input type="text" placeholder="Comment" class="comment"><button class="btn btn-outline-primary">
+                        <i class="fa fa-send-o"></i></button>
+                </div>
+                <div class="author">
+                    <div class="profile"></div>
+                    <div class="about">
+                        <h3 style="font-weight: bold;">Ramesh Kumar</h3>
+                        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Veniam repellendus iure adipisci error quam maxime vel nesciunt sit obcaecati, et officia mollitia quod corporis atque minima perspiciatis! Laborum, dolorum voluptatibus?</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-5 col-sm-11 col-xm-12 col-xl-5">
+                <div class="sidebar">
+                    <input type="text" placeholder="type something!!!">
+                    <h5 class="my-2" style="font-weight: bold;margin-top: 40px!important;">Categories</h5>
+                    <div class="accordion accordion-flush" id="accordionFlushExample">
+                        <div class="accordion-item">
+                            <h2 class="accordion-header" id="flush-headingOne">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                    data-bs-target="#flush-collapseOne" aria-expanded="false"
+                                    aria-controls="flush-collapseOne">
+                                    Game Development
+                                </button>
+                            </h2>
+                            <div id="flush-collapseOne" class="accordion-collapse collapse"
+                                aria-labelledby="flush-headingOne" data-bs-parent="#accordionFlushExample">
+                                <div class="accordion-body">Placeholder content for this accordion, which is intended to
+                                    demonstrate the <code>.accordion-flush</code> class. This is the first item's
+                                    accordion body.</div>
+                            </div>
+                        </div>
+                        <div class="accordion-item">
+                            <h2 class="accordion-header" id="flush-headingTwo">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                    data-bs-target="#flush-collapseTwo" aria-expanded="false"
+                                    aria-controls="flush-collapseTwo">
+                                    Web Development
+                                </button>
+                            </h2>
+                            <div id="flush-collapseTwo" class="accordion-collapse collapse"
+                                aria-labelledby="flush-headingTwo" data-bs-parent="#accordionFlushExample">
+                                <div class="accordion-body">Placeholder content for this accordion, which is intended to
+                                    demonstrate the <code>.accordion-flush</code> class. This is the second item's
+                                    accordion body. Let's imagine this being filled with some actual content.</div>
+                            </div>
+                        </div>
+                        <div class="accordion-item">
+                            <h2 class="accordion-header" id="flush-headingThree">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                    data-bs-target="#flush-collapseThree" aria-expanded="false"
+                                    aria-controls="flush-collapseThree">
+                                    Logo Designing
+                                </button>
+                            </h2>
+                            <div id="flush-collapseThree" class="accordion-collapse collapse"
+                                aria-labelledby="flush-headingThree" data-bs-parent="#accordionFlushExample">
+                                <div class="accordion-body">Placeholder content for this accordion, which is intended to
+                                    demonstrate the <code>.accordion-flush</code> class. This is the third item's
+                                    accordion body. Nothing more exciting happening here in terms of content, but just
+                                    filling up the space to make it look, at least at first glance, a bit more
+                                    representative of how this would look in a real-world application.</div>
+                            </div>
+                        </div>
+                    </div>
+                    <h5 class="my-2" style="font-weight: bold;margin-top: 40px!important;">Tags</h5>
+                    <a class="btn btn-outline-dark">PC</a>
+                    <a class="btn btn-outline-dark">Tech</a>
+                    <a class="btn btn-outline-dark">Laptop</a>
+                    <a class="btn btn-outline-dark">UI Designing</a>
+                    <a class="btn btn-outline-dark">Web</a>
+                    <a class="btn btn-outline-dark my-2">App</a>
+                    <h5 style="font-weight: bold;" class="my-4">Recent Posts</h5>
+                    <h4 class="featurette-heading">What is Slack. <span class="text-primary">How to use it?</span></h2>
+                        <p class="lead" style="font-size: 15px!important;">Lorem ipsum dolor sit amet consectetur,
+                            adipisicing elit. Quod numquam veritatis suscipit ullam necessitatibus quam, reprehenderit
+                            eligendi optio hic. Dolorem maiores mollitia doloremque eum architecto animi doloribus,
+                            consequatur a laudantium.</p>
+                        <img src="Images/blog8.jpg" style="border-radius:  5px" bd-placeholder-img bd-placeholder-img-lg
+                            featurette-image img-fluid mx-auto" width="500" mlns="http://www.w3.org/2000/svg" role="img"
+                            aria-label="Placeholder: 500x500" preserveAspectRatio="xMidYMid slice" focusable="false">
+                        <title>Placeholder</title>
+                        <rect width="100%" height="100%" fill="#eee" /><text x="50%" y="50%" fill="#aaa">
+
+                            <h4 class="featurette-heading my-3">How to create <span class="text-primary">a beautiful UI
+                                    using FIGMA</span></h2>
+                                <p class="lead" style="font-size: 15px!important;">Lorem ipsum dolor sit amet
+                                    consectetur, adipisicing elit. Quod numquam veritatis suscipit ullam necessitatibus
+                                    quam, reprehenderit eligendi optio hic. Dolorem maiores mollitia doloremque eum
+                                    architecto animi doloribus, consequatur a laudantium.</p>
+                                <img src="Images/blog6.jpg" style="border-radius:  5px" bd-placeholder-img
+                                    bd-placeholder-img-lg featurette-image img-fluid mx-auto" width="500"
+                                    mlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: 500x500"
+                                    preserveAspectRatio="xMidYMid slice" focusable="false">
+                                <title>Placeholder</title>
+                                <rect width="100%" height="100%" fill="#eee" /><text x="50%" y="50%" fill="#aaa">
+
+                                    <h4 class="featurette-heading my-3">How to connect <span
+                                            class="text-primary">bluetooth in laptop?</span></h2>
+                                        <p class="lead" style="font-size: 15px!important;">Lorem ipsum dolor sit amet
+                                            consectetur, adipisicing elit. Quod numquam veritatis suscipit ullam
+                                            necessitatibus quam, reprehenderit eligendi optio hic. Dolorem maiores
+                                            mollitia doloremque eum architecto animi doloribus, consequatur a
+                                            laudantium.</p>
+                                        <img src="Images/blog2.jpg" style="border-radius:  5px" bd-placeholder-img
+                                            bd-placeholder-img-lg featurette-image img-fluid mx-auto" width="500"
+                                            mlns="http://www.w3.org/2000/svg" role="img"
+                                            aria-label="Placeholder: 500x500" preserveAspectRatio="xMidYMid slice"
+                                            focusable="false">
+                                        <title>Placeholder</title>
+                                        <rect width="100%" height="100%" fill="#eee" /><text x="50%" y="50%"
+                                            fill="#aaa">
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+  <!-- footer -->
+  
+  <footer id="dk-footer mt-5" class="dk-footer"style="margin-top: 170px">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12 col-lg-4">
+                <div class="dk-footer-box-info">
+                    <a href="index.html" class="footer-logo">
+                        <h3 class="img-fluid text-white mt-5">Divi<span class="text-primary">Blog</span></h3>
+                    </a>
+                    <p class="footer-info-text">
+                       Reference site about Lorem Ipsum, giving information on its origins, as well as a random Lipsum generator.
+                    </p>
+                    <div class="footer-social-link">
+                        <h3>Follow us</h3>
+                        <ul>
+                            <li>
+                                <a href="#">
+                                    <i class="fa fa-facebook"></i>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <i class="fa fa-twitter"></i>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <i class="fa fa-google-plus"></i>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <i class="fa fa-linkedin"></i>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <i class="fa fa-instagram"></i>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                    <!-- End Social link -->
+                </div>
+                <!-- End Footer info -->
+                <div class="footer-awarad">
+                    <img src="images/icon/best.png" alt="">
+                    <p>Best Design Company 2019</p>
+                </div>
+            </div>
+            <!-- End Col -->
+            <div class="col-md-12 col-lg-8">
+                <div class="row">
+                    <div class="col-md-6">
+                        <div class="contact-us">
+                            <div class="contact-icon">
+                                <i class="fa fa-map-o" aria-hidden="true"></i>
+                            </div>
+                            <!-- End contact Icon -->
+                            <div class="contact-info">
+                                <h3>Jaipur India</h3>
+                                <p>5353 Road Avenue</p>
+                            </div>
+                            <!-- End Contact Info -->
+                        </div>
+                        <!-- End Contact Us -->
+                    </div>
+                    <!-- End Col -->
+                    <div class="col-md-6">
+                        <div class="contact-us contact-us-last">
+                            <div class="contact-icon">
+                                <i class="fa fa-volume-control-phone" aria-hidden="true"></i>
+                            </div>
+                            <!-- End contact Icon -->
+                            <div class="contact-info">
+                                <h3>95 711 9 5353</h3>
+                                <p>Give us a call</p>
+                            </div>
+                            <!-- End Contact Info -->
+                        </div>
+                        <!-- End Contact Us -->
+                    </div>
+                    <!-- End Col -->
+                </div>
+                <!-- End Contact Row -->
+                <div class="row">
+                    <div class="col-md-12 col-lg-6">
+                        <div class="footer-widget footer-left-widget">
+                            <div class="section-heading">
+                                <h3>Useful Links</h3>
+                                <span class="animate-border border-black"></span>
+                            </div>
+                            <ul>
+                                <li>
+                                    <a href="#">About us</a>
+                                </li>
+                                <li>
+                                    <a href="#">Services</a>
+                                </li>
+                                <li>
+                                    <a href="#">Projects</a>
+                                </li>
+                                <li>
+                                    <a href="#">Our Team</a>
+                                </li>
+                            </ul>
+                            <ul>
+                                <li>
+                                    <a href="#">Contact us</a>
+                                </li>
+                                <li>
+                                    <a href="#">Blog</a>
+                                </li>
+                                <li>
+                                    <a href="#">Testimonials</a>
+                                </li>
+                                <li>
+                                    <a href="#">Faq</a>
+                                </li>
+                            </ul>
+                        </div>
+                        <!-- End Footer Widget -->
+                    </div>
+                    <!-- End col -->
+                    <div class="col-md-12 col-lg-6">
+                        <div class="footer-widget">
+                            <div class="section-heading">
+                                <h3>Subscribe</h3>
+                                <span class="animate-border border-black"></span>
+                            </div>
+                            <p><!-- Don’t miss to subscribe to our new feeds, kindly fill the form below. -->
+                            Reference site about Lorem Ipsum, giving information on its origins, as well.</p>
+                            <form action="#">
+                                <div class="form-row">
+                                    <div class="col dk-footer-form">
+                                        <input type="email" class="form-control" placeholder="Email Address">
+                                        <button type="submit">
+                                            <i class="fa fa-send"></i>
+                                        </button>
+                                    </div>
+                                </div>
+                            </form>
+                            <!-- End form -->
+                        </div>
+                        <!-- End footer widget -->
+                    </div>
+                    <!-- End Col -->
+                </div>
+                <!-- End Row -->
+            </div>
+            <!-- End Col -->
+        </div>
+        <!-- End Widget Row -->
+    </div>
+    <!-- End Contact Container -->
+  
+  
+    <div class="copyright">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6">
+                    <span>Copyright © 2019, All Right Reserved Seobin</span>
+                </div>
+                <!-- End Col -->
+                <div class="col-md-6">
+                    <div class="copyright-menu">
+                        <ul>
+                            <li>
+                                <a href="#">Home</a>
+                            </li>
+                            <li>
+                                <a href="#">Terms</a>
+                            </li>
+                            <li>
+                                <a href="#">Privacy Policy</a>
+                            </li>
+                            <li>
+                                <a href="#">Contact</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <!-- End col -->
+            </div>
+            <!-- End Row -->
+        </div>
+        <!-- End Copyright Container -->
+    </div>
+    <!-- End Copyright -->
+    <!-- Back to top -->
+    <div id="back-to-top" class="back-to-top">
+        <button class="btn btn-dark" title="Back to Top" style="display: block;">
+            <i class="fa fa-angle-up"></i>
+        </button>
+    </div>
+    <!-- End Back to top -->
+  </footer>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            $(window).scroll(function () {
+                var scroll = $(window).scrollTop();
+                if (scroll > 600) {
+                    $(".main-bg").css("background", "#000");
+                }
+
+                else {
+                    $(".main-bg").css("background", "transparent");
+                }
+            })
+        })
+    </script>
+</body>
+
+</html>
